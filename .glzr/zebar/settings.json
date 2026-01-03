@@ -2,7 +2,7 @@
   "$schema": "https://github.com/glzr-io/zebar/raw/v3.1.1/resources/settings-schema.json",
   "startupConfigs": [
     {
-      "pack": "blaiyz.neosoft-zebar",
+      "pack": "tylerdotrar.neosoft-zebar",
       "widget": "default",
       "preset": "default"
     }

@@ -24,6 +24,7 @@ All keybindings can be found/edited within `~/.glzr/glazewm/config.yaml` and `~/
 | Alt + Shift + Arrow | `Move currently focused window in arrow direction.` |
 | Alt + Shift + Num | `Move currently focused window to specific Workspace.` |
 | Alt + Shift + Space | `Toggle focus between centered and tiled.` |
+| Alt + H / V | `Toggle tiling direction between horizontal and vertical.` |
 | Alt + Shift + P | `Toggle terminal color scheme.` |
 | Alt + Shift + O | `Toggle terminal opacity.` |
 
@@ -35,11 +36,11 @@ Eventually, I'll write some Windows debloating & auto-configuration scripts, but
 # Install required dependencies via winget
 $Packages = @(
     'DEVCOM.JetBrainsMonoNerdFont', # One of the only NerdFonts you can easily install via winget
-    'Microsoft.PowerShell',
-    'wez.wezterm',
-    'Fastfetch-cli.Fastfetch',
-    'glzr.io.glazewm', # This includes Zebar
-    'Brave.Brave' # Default web browser
+    'Microsoft.PowerShell', # PowerShell Core v7+ (cross platform)
+    'wez.wezterm', # Cross platform terminal emulator
+    'glzr.io.glazewm', # Window manager, also includes Zebar taskbar
+    'Brave.Brave', # Default web browser
+    'Fastfetch-cli.Fastfetch' # Not a real dependency, just classic rice
 )
 $Packages | % { winget install $_ --accept-package-agreements --accept-source-agreements }
 ```
@@ -53,9 +54,11 @@ New-Item $PROFILE -Force
 # Copy repo configuration files over (assuming in "winrice" directory)
 $PwshFiles = "${PWD}/Documents/PowerShell"
 $GlzrFiles = "${PWD}/.glzr"
+$ZebarConf = "${PWD}/AppData"
 $WezConfig = "${PWD}/.wezterm.lua
 Copy-Item -LiteralPath $PwshFiles -Destination "${env:USERPROFILE}/Documents/." -Recurse -Force
 Copy-Item -LiteralPath $GlzrFiles -Destination "${env:USERPROFILE}/." -Recurse -Force
+Copy-Item -LiteralPath $ZebarConf -Destination "${env:USERPROFILE}/." -Recurse -Force
 Copy-Item -LiteralPath $WezConfig -Destination "${env:USERPROFILE}/." -Force
 ```
 ```powershell
