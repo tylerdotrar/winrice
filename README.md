@@ -38,7 +38,7 @@ $Packages = @(
     'DEVCOM.JetBrainsMonoNerdFont', # One of the only NerdFonts you can easily install via winget
     'Microsoft.PowerShell', # PowerShell Core v7+ (cross platform)
     'wez.wezterm', # Cross platform terminal emulator
-    'glzr.io.glazewm', # Window manager, also includes Zebar taskbar
+    'glzr-io.glazewm', # Window manager, also includes Zebar taskbar
     'Brave.Brave', # Default web browser
     'Fastfetch-cli.Fastfetch' # Not a real dependency, just classic rice
 )
@@ -55,7 +55,7 @@ New-Item $PROFILE -Force
 $PwshFiles = "${PWD}/Documents/PowerShell"
 $GlzrFiles = "${PWD}/.glzr"
 $ZebarConf = "${PWD}/AppData"
-$WezConfig = "${PWD}/.wezterm.lua
+$WezConfig = "${PWD}/.wezterm.lua"
 Copy-Item -LiteralPath $PwshFiles -Destination "${env:USERPROFILE}/Documents/." -Recurse -Force
 Copy-Item -LiteralPath $GlzrFiles -Destination "${env:USERPROFILE}/." -Recurse -Force
 Copy-Item -LiteralPath $ZebarConf -Destination "${env:USERPROFILE}/." -Recurse -Force
