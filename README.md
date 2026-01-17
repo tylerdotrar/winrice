@@ -35,12 +35,12 @@ Eventually, I'll write some Windows debloating & auto-configuration scripts, but
 ```powershell
 # Install required dependencies via winget
 $Packages = @(
+    'glzr-io.glazewm',              # Window manager (also includes Zebar taskbar)
     'DEVCOM.JetBrainsMonoNerdFont', # One of the only NerdFonts you can easily install via winget
-    'Microsoft.PowerShell', # PowerShell Core v7+ (cross platform)
-    'wez.wezterm', # Cross platform terminal emulator
-    'glzr-io.glazewm', # Window manager, also includes Zebar taskbar
-    'Brave.Brave', # Default web browser
-    'Fastfetch-cli.Fastfetch' # Not a real dependency, just classic rice
+    'Microsoft.PowerShell',         # PowerShell Core v7+ (cross platform)
+    'wez.wezterm',                  # Cross platform terminal emulator
+    'Brave.Brave',                  # Default web browser
+    'Fastfetch-cli.Fastfetch'       # Not a real dependency, just classic rice
 )
 $Packages | % { winget install $_ --accept-package-agreements --accept-source-agreements }
 ```
@@ -49,6 +49,14 @@ $Packages | % { winget install $_ --accept-package-agreements --accept-source-ag
 # (Note: this is within PowerShell Core / pwsh)
 Install-Module Terminal-Icons -Force
 New-Item $PROFILE -Force
+```
+```powershell
+# Enable taskbar auto-hide for cleaner desktop experience
+$RegPath     = 'HKCU:SOFTWARE/Microsoft/Windows/CurrentVersion/Explorer/StuckRects3'
+$RegValue    = (Get-ItemProperty -Path $RegPath).Settings
+$RegValue[8] = 3 # Autohide Taskbar (= 2 to Show Taskbar)
+Set-ItemProperty -Path $RegPath -Name Settings -Value $RegValue
+Stop-Process -Name Explorer -Force
 ```
 ```powershell
 # Copy repo configuration files over (assuming in "winrice" directory)
@@ -60,14 +68,6 @@ Copy-Item -LiteralPath $PwshFiles -Destination "${env:USERPROFILE}/Documents/." 
 Copy-Item -LiteralPath $GlzrFiles -Destination "${env:USERPROFILE}/." -Recurse -Force
 Copy-Item -LiteralPath $ZebarConf -Destination "${env:USERPROFILE}/." -Recurse -Force
 Copy-Item -LiteralPath $WezConfig -Destination "${env:USERPROFILE}/." -Force
-```
-```powershell
-# Enable taskbar auto-hide for cleaner desktop experience
-$RegPath  = 'HKCU:SOFTWARE/Microsoft/Windows/CurrentVersion/Explorer/StuckRects3'
-$RegValue = (Get-ItemProperty -Path $RegPath).Settings
-$RegValue[8] = 3 # Autohide Taskbar
-Set-ItemProperty -Path $RegPath -Name Settings -Value $RegValue
-Stop-Process -Name Explorer -Force
 ```
 ```powershell
 # Set GlazeWM (& Zebar) to launch on startup:
