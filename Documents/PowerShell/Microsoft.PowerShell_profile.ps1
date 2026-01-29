@@ -9,12 +9,10 @@ $ProfileDir = "${env:USERPROFILE}/Documents/PowerShell/PROFILE"
 # Small custom functions
 # - Manually insert functions here...
 # - ... or within the above $ProfileDir directory.
-
-# function Example () { echo 'bruh' }
-
-# General Quality of Life (QoL) Features
 function Get-PublicIP { Invoke-RestMethod https://ifconfig.me/ip }
 function fetch        { fastfetch -l 'Windows' }
+
+# General Quality of Life (QoL) Features
 New-Alias -Name 'Open-SoundSettings' -Value 'mmsys.cpl' -Description 'Shortcut launcher for the Windows Sound control panel.'
 New-Alias -Name 'Open-VolumeMixer' -Value 'sndvol.exe' -Description 'Shortcut launcher for the Windows Volume Mixer.'
 New-Alias -Name 'Open-NetworkAdapters' -Value 'ncpa.cpl' -Description 'Shortcut launcher for Windows Network Adapter settings.'
