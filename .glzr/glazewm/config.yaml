@@ -54,14 +54,14 @@ gaps:
   scale_with_dpi: true
 
   # Gap between adjacent windows.
-  inner_gap: '10px'
+  inner_gap: '7px'
 
   # Gap between windows and the screen edge.
   outer_gap:
-    top: '10px'
-    right: '10px'
-    bottom: '10px'
-    left: '10px'
+    top: '7px'
+    right: '7px'
+    bottom: '7px'
+    left: '7px'
 
 window_effects:
   # Visual effects to apply to the focused window.
@@ -266,10 +266,13 @@ keybindings:
   # Launch CMD terminal. Alternatively, use `shell-exec wt` or
   # `shell-exec %ProgramFiles%/Git/git-bash.exe` to start Windows
   # Terminal and Git Bash respectively.
-
-  #- commands: ['shell-exec cmd']
   - commands: ['shell-exec C:\Program Files\WezTerm\wezterm-gui.exe']
     bindings: ['alt+enter']
+
+  # Open default Windows Subsystem for Linux (WSL) distro
+  # Note: not working lol guess I'll just type `wsl` in my normal terminal for now
+  - commands: ['shell-exec C:\Windows\system32\wsl.exe']
+    bindings: ['alt+shift+enter']
 
   # Open browser of choice
   - commands: ['shell-exec brave']

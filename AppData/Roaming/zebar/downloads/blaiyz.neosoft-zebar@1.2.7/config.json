@@ -1,0 +1,38 @@
+{
+  "$schema": "./schema.json",
+  "direction": "top",
+  "gradient": "top",
+  "attachSides": true,
+  "taskbarIntegration": {
+    "enabled": false,
+    "extraIcons": 0,
+    "primaryMonitorSelection": "all",
+    "secondaryMonitorSelection": "monitor"
+  },
+  "transitionDuration": 400,
+  "providersConfig": {
+    "refreshIntervals": {
+      "cpu": 2000,
+      "memory": 5000,
+      "battery": 60000,
+      "weather": 900000,
+      "network": 2000
+    },
+    "enableErrorLogging": true
+  },
+  "backgroundEffect": "inherit",
+  "enableAutoTiling": true,
+  "clickThroughByDefault": false,
+  "showShutdownButton": true,
+  "showHeartButton": false,
+  "showCpuSection": true,
+  "showMemorySection": true,
+  "showBatterySection": true,
+  "showNetworkSection": true,
+  "extendVolumeSliderByDefault": false,
+  "showWeatherSection": true,
+  "useCelsiusByDefault": false,
+  "showFullDateByDefault": false,
+  "use24hClock": true,
+  "showSeconds": true
+}
