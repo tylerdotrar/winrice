@@ -4,19 +4,19 @@
 > 
 > _(Note: this is intended to use a minimal amount of third party applications to reduce configuration complexity & launch latency)_
 
-<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/b2a37970-3571-443f-a31d-447615994480" />
+
+<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/634dc9d6-7b73-41af-aae3-2954dad5436d" />
+
 
 ## Keybindings
-
-All keybindings can be found/edited within `~/.glzr/glazewm/config.yaml` and `~/.wezterm.lua`.
 
 **Primary keybindings include:**
 
 | Keybind | Function |
 | --- | --- |
-| Alt + Enter | `Launch Terminal (wezterm).` |
-| Alt + W | `Launch Web Browser (Brave).` |
-| Alt + B | `Launch File Browser (Explorer).` |
+| Alt + Enter | `Launch Terminal (default: wezterm).` |
+| Alt + W | `Launch Web Browser (default: Brave Browser).` |
+| Alt + B | `Launch File Browser (default: Windows Explorer).` |
 | Alt + Q | `Kill currently focused window.` |
 | Alt + F | `Fullscreen currently focused window.` |
 | Alt + Arrow | `Change focus to different window.` |
@@ -25,8 +25,14 @@ All keybindings can be found/edited within `~/.glzr/glazewm/config.yaml` and `~/
 | Alt + Shift + Num | `Move currently focused window to specific Workspace.` |
 | Alt + Shift + Space | `Toggle focus between centered and tiled.` |
 | Alt + H / V | `Toggle tiling direction between horizontal and vertical.` |
+| Alt + U / P | `Resize currently focused window left/right.` |
+| Alt + I / O | `Resize currently focused window up/down.` |
 | Alt + Shift + P | `Toggle terminal color scheme.` |
 | Alt + Shift + O | `Toggle terminal opacity.` |
+| Alt + Shift + R | `Refresh GlazeWM configuration.` |
+| Alt + Shift + E | `Exit GlazeWM and Zebar.` |
+
+_Note: All other keybindings can be found/edited within `~/.glzr/glazewm/config.yaml` and `~/.wezterm.lua`._
 
 ## Requirements
 
@@ -89,8 +95,33 @@ Set-ItemProperty -Path $RegRunKey -Name 'GlazeWM Launcher' -Value $GlazePath
 
 ## Gallery
 
-<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/9735d810-356a-4ef1-9b84-9b442278eccf" />
-<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/0752cd42-7801-447d-b635-e5bda31f58a4" />
-<img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/b2a37970-3571-443f-a31d-447615994480" />
+### Terminal Color Schemes
 
+> **Left** : `s3r0 modified (terminal.sexy)` - Default Color Scheme, Default Opacity
+> 
+> **Right** : `Default (dark) (terminal.sexy)` - Alternate Color Scheme (`Alt + Shift + P`), Alternate Opacity (`Alt + Shift + O`)
+>
+>> Settings modified within --> `~/.wezterm.lua`
+> 
+> <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/cab8bd74-68f6-48f1-aecb-01cdf6d1009b" />
 
+### Wallpapers
+
+> `gruvbox_forest_4k.png` : 4K upscaled inner forest with rustic gruvbox theme.
+> 
+> <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/49725b1a-7587-46c2-b081-2e6370c9bdc2" />
+---
+> `forest_faded.png` : Misty forest with yellow-green gruvbox color grading.
+> 
+> <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/12a1213e-d45d-4027-baa7-a7cdc85e5bdd" />
+---
+> `firewatch_flipped_left.png` : 5120x1440p Firewatch themed image split in half for dual monitor setups.
+>
+> <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/6603ad98-4944-4b5b-b315-576726c53956" />
+
+### Zebar Configuration
+
+> Example settings of **blaiyz**'s highly configurable [neosoft-zebar](https://github.com/blaiyz/neosoft-zebar) Zebar taskbar.
+>> Settings modified within --> `%AppData%\zebar\downloads\blaiyz.neosoft-zebar@1.2.7\config.json`
+> 
+> <img width="2559" height="1439" alt="image" src="https://github.com/user-attachments/assets/8f0259ab-fc5a-4f46-b10e-f9518caf152d" />
