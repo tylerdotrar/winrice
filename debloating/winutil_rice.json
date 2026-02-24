@@ -1,0 +1,30 @@
+{
+  "WPFTweaks": [
+    "WPFTweaksConsumerFeatures",
+    "WPFTweaksDisableIPv6",
+    "WPFTweaksEdgeDebloat",
+    "WPFTweaksDVR",
+    "WPFTweaksBlockAdobeNet",
+    "WPFTweaksWPBT",
+    "WPFTweaksRemoveCopilot",
+    "WPFTweaksDisableBGapps",
+    "WPFTweaksRemoveOneDrive",
+    "WPFTweaksTelemetry",
+    "WPFTweaksServices",
+    "WPFTweaksRemoveEdge",
+    "WPFTweaksRemoveHome",
+    "WPFTweaksDiskCleanup",
+    "WPFTweaksHiber",
+    "WPFTweaksDeleteTempFiles",
+    "WPFTweaksTeredo",
+    "WPFTweaksLocation",
+    "WPFTweaksRemoveGallery",
+    "WPFTweaksBraveDebloat",
+    "WPFTweaksPowershell7Tele",
+    "WPFTweaksEndTaskOnTaskbar",
+    "WPFTweaksIPv46"
+  ],
+  "Install": [],
+  "WPFInstall": [],
+  "WPFFeature": []
+}

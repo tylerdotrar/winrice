@@ -1,18 +1,18 @@
 general:
 
-  ### This configuration utilizes GlazeWM, Zebar, Wezterm/pwsh, and Brave Browser on a dual monitor setup.
+  ### This configuration utilizes GlazeWM, Zebar, Wezterm/pwsh, and Brave Browser.
   ###  > Monitor Configuration: 2560p x 1440p display (2x)
   ###  > Author: Tyler McCann (@tylerdotrar)
   
-  # Note: was working on a taskbar visibility toggle, but kept having some minor hiccups.
+  # Note: was working on a taskbar visibility toggle, but kept having some hiccups. Leaving legacy code for now.
 
-  # Start zebar and Hide Taskbar
+  # Start Zebar (and attempt to Hide Taskbar)
   startup_commands: [
     "shell-exec zebar",
     #"shell-exec powershell -WindowStyle Hidden -C &{Start-Sleep -Seconds 1;$p='HKCU:SOFTWARE/Microsoft/Windows/CurrentVersion/Explorer/StuckRects3';$v=(Get-ItemProperty -Path $p).Settings;$v[8]=3;Set-ItemProperty -Path $p -Name Settings -Value $v;Stop-Process -Name explorer -F}",
   ]
 
-  # Kill Zebar and Show Taskbar
+  # Kill Zebar (and attempt to Show Taskbar)
   shutdown_commands: [
     "shell-exec taskkill /IM zebar.exe /F"
     #"shell-exec powershell -WindowStyle Hidden -C &{$p='HKCU:SOFTWARE/Microsoft/Windows/CurrentVersion/Explorer/StuckRects3';$v=(Get-ItemProperty -Path $p).Settings;$v[8]=2;Set-ItemProperty -Path $p -Name Settings -Value $v;Stop-Process -Name explorer -F}"
@@ -68,9 +68,14 @@ window_effects:
   focused_window:
     # Highlight the window with a colored border.
     # ** Exclusive to Windows 11 due to API limitations.
+    # Color Code Reference --> https://html-color.codes/
     border:
       enabled: true
-      color: '#8dbcff'
+      #color: '#b0c4de' # Light Steel Blue 
+      color: '#8fbc8f' # Dark Sea Green
+      #color: '#4f7942' # Fern Green
+      #color: '#c46210' # Alloy Orange
+      #color: '#e3ab57' # Sunray
 
     # Remove the title bar from the window's frame. Note that this can
     # cause rendering issues for some applications.

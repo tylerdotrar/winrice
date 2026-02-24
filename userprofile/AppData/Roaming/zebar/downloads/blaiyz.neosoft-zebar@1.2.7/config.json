@@ -29,7 +29,7 @@
   "showMemorySection": true,
   "showBatterySection": true,
   "showNetworkSection": true,
-  "extendVolumeSliderByDefault": false,
+  "extendVolumeSliderByDefault": true,
   "showWeatherSection": true,
   "useCelsiusByDefault": false,
   "showFullDateByDefault": false,
